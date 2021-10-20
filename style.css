@@ -1,0 +1,188 @@
+body{
+    background: url("https://thietkewebaio.com/wp-content/uploads/2021/07/thiet-ke-web-ban-hang.jpeg");
+    background-size: cover;
+    background-position-y: -50px;   
+}
+.container{
+    max-width: 960px;
+    margin: 0px auto;
+}
+#header{
+    background-color:rgb(105, 94, 70);
+    border-radius: 10px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: cennter;
+}
+#logo{
+    padding: 5px 0;
+}
+#logo img{
+    max-width: 100px;
+    height: auto;
+}
+#main-menu{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+#main-menu li{
+    position: relative;
+}
+#main-menu li a{
+    color:white;
+    display: block;
+    padding: 20px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#main-menu ul.sub-menu{
+    position: absolute;
+    background-color: rgb(105, 94, 70);
+    padding: 15px 0px;
+    list-style: none;
+    width: 200px;
+    display: none;
+    margin-top: 5px;
+    padding: 5px;
+}
+#main-menu li:hover ul.sub-menu{
+    display:block;
+}
+#main-menu ul.sub-menu a{
+    padding: 10px 10px;
+    border-bottom: 1px solid whitesmoke;
+    left:0;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+#main-menu ul.sub-menu li:hover>a{
+    border-bottom: 1px solid whitesmoke;
+}
+#main-menu ul.sub-menu li:last-child a{
+    border: none;
+}
+/*Thiết lập border khi hover*/
+#main-menu>li>a{
+    position: relative;
+}
+#main-menu>li>a::before{
+    content: "";
+    height: 4px;
+    width: 0px;
+    background-color:rgb(97, 28, 97);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: 0.25s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+#main-menu>li:hover>a::before{
+    width: 100%;
+}
+/* UP CONTENT  */
+#up-content{
+    padding: 0;
+    margin: 0;
+    line-height: 1.15;
+}
+#wrapper{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.headline{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+h3{
+    font-size: 18px;
+    color:white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    display: inline-block;
+    font-weight: 800;
+}
+ul.products{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+ul.products li{
+    flex-basis: 25%;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+}
+ul.products li img{
+    width: 303px;
+    height: 220px;
+}
+ul.products li .product-top{
+    position: relative;
+    overflow: hidden;
+}
+ul.products li .product-top .product-thumb{
+    display: block;
+}
+ul.products li:hover .product-top .product-thumb img{
+    filter: opacity(80%);
+}
+ul.products li .product-top .product-thumb img{
+    display: block;
+}
+ul.products li .product-top .buy-now{
+    margin-right: auto;
+}
+ul.products li .product-top a.buy-now{
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    background-color: rgb(81, 84, 122);
+    color:white;
+    padding: 10px 0px;
+    font-weight: 600;
+    position:absolute;
+    bottom: -38px;
+    width: 100%;
+    transition: 0.25s ease-in-out;
+    opacity: 0.9;
+}
+ul.products li:hover a.buy-now{
+    bottom: 0px;
+}
+ul.products li .product-info{
+    padding: 5px 0px;
+}
+ul.products li .product-info a{
+    display: block;
+    text-decoration: none;
+
+}
+ul.products li .product-info a.product-cat{
+    font-size: 20px;
+    color: whitesmoke;
+    font-weight: 700;
+    padding: 3px 0px;
+}
+ul.products li .product-info a.product-name{
+    color: rgb(217, 235, 223);
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+ul.products li .product-info a.product-price{
+    color:white;
+    font-weight: 900;
+    font-size: 18px;
+}
