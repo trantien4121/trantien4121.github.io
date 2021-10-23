@@ -1,37 +1,25 @@
-$(document).ready(function(){
-    //khai báo biến submit form lấy đối tượng nút submit
-    var submit = $("form-submit[type='submit']");
+var correct_user='19T1021271';
+var correct_password='412001';
 
-    //khi nút submit được click
-    submit.click(function()
-    {
-      //khai báo các biến dữ liệu gửi lên server
-      var user = $("form-input[placeholder='Mã sinh viên']").val(); //lấy giá trị trong input user
+var inputUsename=document.getElementById('username');
+var inputPassword=document.getElementById('password');
 
-      //Kiểm tra xem trường đã được nhập hay chưa
-      if(user == ''){
-        alert('Vui lòng nhập Tên người dùng');
-        return false;
-      }
+var formLogin=document.getElementById('form-login');
 
-      //Lấy toàn bộ dữ liệu trong Form
-      var data = $('form#form_input').serialize();
-    
-      //Sử dụng phương thức Ajax.
-      $.ajax({
-            type : 'GET', //Sử dụng kiểu gửi dữ liệu POST
-            url : 'data.php', //gửi dữ liệu sang trang data.php
-            data : data, //dữ liệu sẽ được gửi
-            success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
-                      { 
-                         if(data == 'false') 
-                         {
-                           alert('Không có người dùng');
-                         }else{
-                           $('#content').html(data); //dữ liệu HTML trả về sẽ được chèn vào trong thẻ có id content
-                         }
-                      }
-            });
-            return false;
-      });
-});
+if(formLogin.attachEvent){
+  formLogin.attachEvent('submit', onformSubmit);
+}else{
+  formLogin.addEventListener('submit', onformSubmit);
+}
+
+function onformSubmit(e){
+  var username=inputUsename.value;
+  var password=inputPassword.value;
+
+  if(username==correct_user && password==correct_password){
+    alert('Đăng Nhập thành công!');
+    open("https://trantien4121.github.io/");
+  }else{
+    alert('Đăng Nhập Không thành công! Kiểm tra lại Mã Sinh Viên và Mật Khẩu')
+  }
+}
