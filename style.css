@@ -186,3 +186,38 @@ ul.products li .product-info a.product-price{
     font-weight: 900;
     font-size: 18px;
 }
+.end{
+    background-color: rgb(148, 118, 79);
+    height: 100px;
+    padding: 3px ;
+    border-radius: 3px;
+}
+#contentfooter{
+    font-size: 21px;
+    color: cornsilk;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.footline{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+#PageNumber{
+    font-size: 18px;
+    color:white;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    display: inline-block;
+    font-weight: 900;
+    margin-bottom:50px;
+    margin-top: 10px;
+    margin-left:5px;
+}
+
+#PageNumber:hover{
+    color:white;
+    background-color:rgb(81, 84, 122);
+}
