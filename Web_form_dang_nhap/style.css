@@ -14,6 +14,7 @@ body{
     flex-grow: 1;
     padding: 20px 150px 20px 20px;
     box-shadow:0px 0px 17px 2px rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
 }
 .form-heading{
     font-family: 'Roboto', sans-serif;
@@ -50,5 +51,5 @@ body{
     height: 30px;
 }
 .form-submit:hover{
-    background-color: wheat;
+    background-color: rgb(189, 158, 102);
 }
