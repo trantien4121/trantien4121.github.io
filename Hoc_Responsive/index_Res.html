@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="grid_Column.css">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+        }
+        .container{
+            /* background-color: orange; */
+            text-align: center;
+        }
+        /* h1{
+            padding: 100px 0;
+            font-size: 100px;
+            color: #fff;
+            margin: 0;
+        } */
+        .course-item{
+            background-color: orange;
+            height: 260px;
+        }
+        h1{
+            color: #fff;
+            line-height: 260px;
+            margin: 0;
+        }
+        @media (max-width: 1023px){
+            .course-item{
+                margin-top: 16px;
+            }
+        }
+        .category{
+            background-color: green;
+            height: 260px;
+        }
+        ul{
+            margin-top: 0;
+        }
+    </style>
+
+    <!--
+        Column: .col
+        Prefix class: 
+            - c - mobile
+            - m - tablet
+            - l - pc
+    -->
+
+</head>
+<body>
+    <div class="grid wide container">
+        <!-- <h1>Grid System</h1> -->
+        <div class="row">
+           
+            <div class="col l-3 m-0 c-0">           <!--  Với 12 cột, ta chia 3 cột để chứa thanh menu và 9 cột để chứa khóa học (l-3 và l-9) -->
+                <div class="category">              <!--Khi trên tablet, cũng 12 cột, thì ta ẩn menu và cho khóa học full 12 cột (m-0 và m-12), vì trên tablet ta đã css m-0 có dispaly: none-->
+                    <ul>                            <!--Khi trên mobile, cũng 12 cột, thì ta ẩn menu và cho khóa học full 12 cột (c-0 và c-12), vì trên mobile ta đã css c-0 có dispaly: none-->                         
+                        <li>Javascript</li>
+                        <li>HTML, CSS</li>
+                        <li>PHP</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col l-9 m-12 c-12">
+                <div class="row">
+                    <div class="col l-4 m-6 c-12">  <!--Trong l-9, ta tạo row bằng 100%, tức là trong row vẫn 12 cột-->
+                        <div class="course-item">   <!-- l-4: tức là trên Pc hiển thị mỗi sản phẩm chứa 12/4=3 column, tức là hiển thị cả 3 sản phẩm trên 1 hàng ngang-->
+                            <h1>course 1</h1>       <!-- m-6: tức là trên tablet hiển thị mỗi sản phẩm chứa 12/6=2 column--, tức là 2 sảm phẩm trên 1 hàng ngang, 1 sản phẩm xuống dưới-->
+                        </div>                      <!-- l-4: tức là trên Pc hiển thị mỗi sản phẩm chứa 12/12=1 column, tức là hiển thị 1 sản phẩm trên 1 hàng ngang và sẽ có 3 hàng-->   
+                    </div>
+                    
+                    <div class="col l-4 m-6 c-12">
+                        <div class="course-item">
+                            <h1>course 2</h1>
+                        </div>
+                    </div>
+                    
+                    <div class="col l-4 m-6 c-12">
+                        <div class="course-item">
+                            <h1>course 3</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

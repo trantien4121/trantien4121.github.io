@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /*Khi có box-sizing thì nếu có padding và boder thì tổng kích thước vẫn không thay đổi*/
+}
+
+.item{
+    margin-top: 16px;
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    min-height: 180px;
+    line-height: 180px;
+    background-color: orange;
+}
+
+.main{
+    display: flex; 
+    padding: 0 32px;    /*Trên dưới bằng 0, trái phải bằng 32px*/
+}
+
+.sidebar{
+    width: 300px;
+    background-color: #666;
+}
+
+.content{
+    /* width: calc(100% - 300px);  */
+    flex: 1;    /*Nếu để dòng ở trên thì khi ẩn sidebar trên tablet, contetnt sẽ ko cân đối, thay vào đó ta sử dụng flex: 1, khi sidebar ẩn thì content sẽ chiếm nốt*/
+}
+
+@media (min-width: 740px) and (max-width: 1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+}
+
+@media (max-width: 739px){
+    .hide-on-mobile{
+        display: none;
+    }
+}

@@ -1,0 +1,44 @@
+<!-- Tạo layout shoppe có danh mục chiếm 2 cột và sản phẩm chiếm 5 cột -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/grid_Column.css"> 
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="grid wide">
+        <div class="row">
+           <div class="col l-2 m-0 c-0">    <!--m-0 nghĩa là trên tablet sẽ ẩn đi Category, tương tự là c-0 trên mobile-->
+               <div class="item">Category</div>
+           </div>
+
+           <div class="col l-10 m-12 c-12">
+                <div class="content">
+                    <!-- sắp xếp / giá / sản phẩm  -->
+                    <div class="row">
+                        <div class="col l-2-4 m-4 c-12"> <!--Trên tablet, hiển thị 3 sản phẩm trên cùng 1 dòng (m-4)-->
+                            <div class="item">Item 1</div> <!--Trên mobile, hiển thị 1 sản phẩm trên 1 dòng(c-12)-->
+                        </div>
+                        <div class="col l-2-4 m-4 c-12">
+                            <div class="item">Item 2</div>
+                        </div>
+                        <div class="col l-2-4 m-4 c-12">
+                            <div class="item">Item 3</div>
+                        </div>
+                        <div class="col l-2-4 m-4 c-12">
+                            <div class="item">Item 4</div>
+                        </div>
+                        <div class="col l-2-4 m-4 c-12">
+                            <div class="item">Item 5</div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </div>
+</body>
+</html>
