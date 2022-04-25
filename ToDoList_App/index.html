@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap&subset=vietnamese" rel="stylesheet">  <!--Link font chữ roboto-->
+</head>
+<body>
+    <header>
+        <h1>To Do List 2022</h1>
+        <form id="new-task-form">
+            <input type="text" id="new-task-input" placeholder="Add the Task to do...">
+            <input type="submit" id="new-task-submit" value="Add Task">
+        </form>
+    </header>
+
+    <main>
+        <section class="task-list">
+            <h2>Tasks</h2>
+
+            <div id="tasks">
+                <div class="task">
+                    <div class="content">
+                        <input type="text" class="text" value="My important task" readonly>
+                    </div>
+                    <div class="actions">
+                        <button class="edit">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                            Edit
+                        </button>
+                        <button class="delete">
+                            <i class="fa-regular fa-trash-can"></i>
+                            Delete
+                        </button>
+                        <button class="done">
+                            <i class="fa-regular fa-circle-check"></i>
+                            Done
+                        </button>
+                    </div>
+                </div>
+
+                <div class="task">
+                    <div class="content">
+                        <input type="text" class="text" value="Do homework" readonly>
+                    </div>
+                    <div class="actions">
+                        <button class="edit">
+                            <i class="fa-regular fa-pen-to-square"></i>
+                            Edit
+                        </button>
+                        <button class="delete">
+                            <i class="fa-regular fa-trash-can"></i>
+                            Delete
+                        </button>
+                        <button class="done">
+                            <i class="fa-regular fa-circle-check"></i>
+                            Done
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
